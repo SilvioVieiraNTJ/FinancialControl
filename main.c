@@ -14,7 +14,7 @@ int main(){
         choice = selectChoice();
         switch (choice){
             case 1:
-                // case 1
+                int banco = 1;
             break;
             
             default:
