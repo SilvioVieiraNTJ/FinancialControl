@@ -1,13 +1,13 @@
-void initoNode(oNode** node){
+void initOutputNode(OutputNode** node){
     *node = NULL;
 }
-void initiNode(iNode** node){
+void initInputNode(InputNode** node){
     *node = NULL;
 }
 
-iNode* getiNode(Input new_data){
-    iNode* new_node = (iNode*) malloc(sizeof(iNode));
-    initiNode(&new_node);
+InputNode* getInputNode(Input new_data){
+    InputNode* new_node = (InputNode*) malloc(sizeof(InputNode));
+    initInputNode(&new_node);
     if (new_node == NULL){
         printf("error.\n");
         return NULL;
@@ -16,9 +16,9 @@ iNode* getiNode(Input new_data){
     return new_node;
 }
 
-oNode* getoNode(Output new_data){
-    oNode* new_node = (oNode*) malloc(sizeof(oNode));
-    initoNode(&new_node);
+OutputNode* getOutputNode(Output new_data){
+    OutputNode* new_node = (OutputNode*) malloc(sizeof(OutputNode));
+    initOutputNode(&new_node);
     if (new_node == NULL){
         return NULL;
     }

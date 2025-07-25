@@ -10,20 +10,20 @@ typedef struct Input { // contribution
     char name[50], payment_method[15];
 }Input;
 
-typedef struct oNode { // output node
+typedef struct OutputNode { // output node
     Output data;
-    struct oNode* next;
-}oNode;
+    struct OutputNode* next;
+}OutputNode;
 
-typedef struct iNode { // input node
+typedef struct InputNode { // input node
     Input data;
-    struct iNode* next;
-}iNode;
+    struct InputNode* next;
+}InputNode;
 
 typedef struct Month {
     char name[20];
-    oNode* outputs;
-    iNode* inputs;
+    OutputNode* outputs;
+    InputNode* inputs;
 }Month;
 
 typedef struct Year {
